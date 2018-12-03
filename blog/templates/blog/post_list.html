@@ -12,30 +12,15 @@
             </h1>
         </div>
         
+        {% for post in posts %}
         <div>
-            <p>
-                published: 26.12.2018, 14:00>
-            <p>
-            <h2>
-                <a href="">Digital Communication</a>
-            </h2>
-            <p>
-                Digital communication is a mode of communication. It occurs when the information or the thought is encoded digitally as discreet signals and then is electronically transferred to the recipients.
-            </p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-        
-        <div>
-            <p>
-                published: 27.12.2018, 14:00>
-            <p>
-            <h2>
-                <a href="">Introduction to CAD/CAM</a>
-            </h2>
-            <p>
-                
-                AD is a short form for Computer Aided Design.Computer-aided design (CAD) is a computer technology that designs a product and documents the design's process. CAD may facilitate the manufacturing process by transferring detailed diagrams of a product’s materials, processes, tolerances and dimensions with specific conventions for the product in question. 
-            </p>
-        </div>
+        {% endfor %}
+    </body>
+</html>
         
         
             
